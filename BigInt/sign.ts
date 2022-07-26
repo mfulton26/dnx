@@ -1,5 +1,5 @@
-import key from "dnx/symbols/sign.ts";
-import value from "dnx/BigInt/prototype/sign.ts";
+import key from "../symbols/sign.ts";
+import value from "./prototype/sign.ts";
 
 declare global {
   interface BigInt {

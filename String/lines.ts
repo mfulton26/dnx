@@ -1,5 +1,5 @@
-import key from "dnx/symbols/lines.ts";
-import value from "dnx/String/prototype/lines.ts";
+import key from "../symbols/lines.ts";
+import value from "./prototype/lines.ts";
 
 declare global {
   interface String {

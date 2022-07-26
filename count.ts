@@ -1,4 +1,4 @@
-export { default } from "dnx/symbols/count.ts";
+export { default } from "./symbols/count.ts";
 
-import "dnx/Array/count.ts";
-import "dnx/Iterator/count.ts";
+import "./Array/count.ts";
+import "./Iterator/count.ts";

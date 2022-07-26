@@ -1,5 +1,5 @@
-import key from "dnx/symbols/slices.ts";
-import value from "dnx/Array/prototype/slices.ts";
+import key from "../symbols/slices.ts";
+import value from "./prototype/slices.ts";
 
 declare global {
   interface Array<T> {

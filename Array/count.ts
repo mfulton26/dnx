@@ -1,5 +1,5 @@
-import key from "dnx/symbols/count.ts";
-import value from "dnx/Array/prototype/count.ts";
+import key from "../symbols/count.ts";
+import value from "./prototype/count.ts";
 
 declare global {
   interface Array<T> {

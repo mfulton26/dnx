@@ -1,7 +1,7 @@
-import key from "dnx/symbols/map.ts";
-import value from "dnx/Iterator/prototype/map.ts";
+import { prototype } from "../Iterator.ts";
 
-import { prototype } from "dnx/Iterator.ts";
+import key from "../symbols/map.ts";
+import value from "./prototype/map.ts";
 
 declare global {
   interface IterableIterator<T> {

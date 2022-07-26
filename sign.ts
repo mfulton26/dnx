@@ -1,3 +1,3 @@
-export { default } from "dnx/symbols/sign.ts";
+export { default } from "./symbols/sign.ts";
 
-import "dnx/BigInt/sign.ts";
+import "./BigInt/sign.ts";

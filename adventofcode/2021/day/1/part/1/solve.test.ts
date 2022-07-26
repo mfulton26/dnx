@@ -1,4 +1,4 @@
-import solve from "dnx/2021/day/1/part/1/solve.ts";
+import solve from "./solve.ts";
 
 import { assertEquals } from "std/testing/asserts.ts";
 

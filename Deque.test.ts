@@ -1,4 +1,4 @@
-import Deque from "dnx/Deque.ts";
+import Deque from "./Deque.ts";
 
 import { assertEquals } from "std/testing/asserts.ts";
 

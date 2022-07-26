@@ -1,4 +1,4 @@
-export { default } from "dnx/symbols/map.ts";
+export { default } from "./symbols/map.ts";
 
-import "dnx/Array/map.ts";
-import "dnx/Iterator/map.ts";
+import "./Array/map.ts";
+import "./Iterator/map.ts";

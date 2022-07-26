@@ -1,3 +1,3 @@
-export { default } from "dnx/symbols/lines.ts";
+export { default } from "./symbols/lines.ts";
 
-import "dnx/String/lines.ts";
+import "./String/lines.ts";

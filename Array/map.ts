@@ -1,5 +1,5 @@
-import key from "dnx/symbols/map.ts";
-import value from "dnx/Array/prototype/map.ts";
+import key from "../symbols/map.ts";
+import value from "./prototype/map.ts";
 
 declare global {
   interface Array<T> {
