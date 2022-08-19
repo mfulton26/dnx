@@ -1,17 +1,14 @@
 import { prototype } from "../Iterator.ts";
 
 import key from "../symbols/slices.ts";
-import value from "./prototype/slices.ts";
+import value from "./methods/slices.ts";
 
 declare global {
-  interface IterableIterator<T> {
-    [key]: typeof value;
-  }
-  interface Generator<T> {
+  interface Iterator<T> {
     [key]: typeof value;
   }
 }
 
-prototype[key] = value;
+Object.defineProperty(prototype, key, { value });
 
 export default key;

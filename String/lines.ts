@@ -1,5 +1,5 @@
 import key from "../symbols/lines.ts";
-import value from "./prototype/lines.ts";
+import value from "./methods/lines.ts";
 
 declare global {
   interface String {
@@ -7,6 +7,6 @@ declare global {
   }
 }
 
-String.prototype[key] = value;
+Object.defineProperty(String.prototype, key, { value });
 
 export default key;

@@ -2,11 +2,11 @@ import key from "../symbols/sign.ts";
 import value from "./methods/sign.ts";
 
 declare global {
-  interface BigInt {
+  interface Number {
     [key]: typeof value;
   }
 }
 
-Object.defineProperty(BigInt.prototype, key, { value });
+Object.defineProperty(Number.prototype, key, { value });
 
 export default key;

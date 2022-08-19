@@ -1,17 +1,14 @@
 import { prototype } from "../Iterator.ts";
 
 import key from "../symbols/map.ts";
-import value from "./prototype/map.ts";
+import value from "./methods/map.ts";
 
 declare global {
-  interface IterableIterator<T> {
-    [key]: typeof value;
-  }
-  interface Generator<T> {
+  interface Iterator<T> {
     [key]: typeof value;
   }
 }
 
-prototype[key] = value;
+Object.defineProperty(prototype, key, { value });
 
 export default key;

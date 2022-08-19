@@ -1,5 +1,5 @@
-import key from "../symbols/sign.ts";
-import value from "./methods/sign.ts";
+import key from "../symbols/isAtMost.ts";
+import value from "./methods/isAtMost.ts";
 
 declare global {
   interface BigInt {

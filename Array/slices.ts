@@ -1,5 +1,5 @@
 import key from "../symbols/slices.ts";
-import value from "./prototype/slices.ts";
+import value from "./methods/slices.ts";
 
 declare global {
   interface Array<T> {
@@ -10,6 +10,6 @@ declare global {
   }
 }
 
-Array.prototype[key] = value;
+Object.defineProperty(Array.prototype, key, { value });
 
 export default key;
