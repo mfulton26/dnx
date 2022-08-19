@@ -1,7 +1,7 @@
 import * as Iterator from "../Iterator.ts";
 
-import key from "../symbols/slices.ts";
-import value from "./methods/slices.ts";
+import key from "../symbols/countBig.ts";
+import value from "./methods/countBig.ts";
 
 declare global {
   interface Iterator<T> {
