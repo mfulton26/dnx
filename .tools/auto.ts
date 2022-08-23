@@ -109,7 +109,7 @@ ${
             return typeName;
           default:
             if (typeName.endsWith("Constructor")) {
-              return typeName.slice(0, "Constructor".length);
+              return typeName.slice(0, -"Constructor".length);
             }
             return `${typeName}.prototype`;
         }
