@@ -1,3 +1,5 @@
+// todo: port and bench iterator implementation
+
 export default function* lines(this: string) {
   const { length } = this;
   let start = 0;

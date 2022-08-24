@@ -2,6 +2,8 @@ import safeInteger from "./Number/safeInteger.ts";
 import isAtLeast from "./Number/isAtLeast.ts";
 import isAtMost from "./Number/isAtMost.ts";
 
+// todo: port and bench iterator implementation
+
 export default function* integers(
   first?: number,
   last?: number,

@@ -4,6 +4,8 @@ import "./BigInt/sign.ts";
 import isAtLeast from "./BigInt/isAtLeast.ts";
 import isAtMost from "./BigInt/isAtMost.ts";
 
+// todo: port and bench iterator implementation
+
 export default function* bigInts(
   first: bigint,
   last: bigint,
