@@ -23,10 +23,11 @@ async function loadData() {
 
 async function writeSymbolFiles() {
   for (const methodName of data.keys()) {
-    await Deno.writeTextFile(
-      `symbols/${methodName}.ts`,
-      symbolFileData(methodName),
-    );
+    const path = `symbols/${methodName}.ts`;
+    const data = symbolFileData(methodName);
+    if (data !== await Deno.readTextFile(path)) {
+      await Deno.writeTextFile(path, data);
+    }
   }
 
   function symbolFileData(methodName: string) {
@@ -37,10 +38,11 @@ async function writeSymbolFiles() {
 async function writeTypeMethodFiles() {
   for (const [methodName, typeNames] of data) {
     for (const typeName of typeNames) {
-      await Deno.writeTextFile(
-        `${typeName}/${methodName}.ts`,
-        typeMethodFileData(methodName, typeName),
-      );
+      const path = `${typeName}/${methodName}.ts`;
+      const data = typeMethodFileData(methodName, typeName);
+      if (data !== await Deno.readTextFile(path)) {
+        await Deno.writeTextFile(path, data);
+      }
     }
   }
 
@@ -128,10 +130,11 @@ ${
 
 async function writeRootMethodFiles() {
   for (const [methodName, typeNames] of data) {
-    await Deno.writeTextFile(
-      `${methodName}.ts`,
-      rootMethodFileData(methodName, [...typeNames]),
-    );
+    const path = `${methodName}.ts`;
+    const data = rootMethodFileData(methodName, [...typeNames]);
+    if (data !== await Deno.readTextFile(path)) {
+      await Deno.writeTextFile(path, data);
+    }
   }
 
   function rootMethodFileData(methodName: string, typeNames: string[]) {
