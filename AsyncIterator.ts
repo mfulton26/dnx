@@ -1,5 +1,3 @@
-import AsyncGeneratorFunction from "./AsyncGeneratorFunction.ts";
+import * as AsyncGenerator from "./AsyncGenerator.ts";
 
-export const prototype = Object.getPrototypeOf(
-  AsyncGeneratorFunction.prototype.prototype,
-);
+export const prototype = Object.getPrototypeOf(AsyncGenerator.prototype);

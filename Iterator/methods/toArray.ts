@@ -1,5 +1,5 @@
-export default function toArray<T>(this: Iterator<T>): T[] {
-  const result = [];
+export default function toArray<T>(this: Iterator<T>) {
+  const result: T[] = [];
   for (
     let { done, value } = this.next();
     !done;

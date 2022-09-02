@@ -1,33 +1,32 @@
-interface Queue<T> {
-  push(item: T): void;
-  shift(): T | undefined;
-  [Symbol.iterator](): Iterator<T>;
-}
+import type QueueLikeConstructor from "../../QueueLikeConstructor.d.ts";
 
-interface QueueConstructor<T> {
-  new (): Queue<T>;
-}
+import * as Iterator from "../../Iterator.ts";
 
-export default function* slices<T>(
+export default function slices<T>(
   this: Iterator<T>,
   size: number,
   step = 1,
-  { Queue = Array }: { Queue?: QueueConstructor<T> } = {},
+  { Queue = Array }: { Queue?: QueueLikeConstructor<T> } = {},
 ) {
   const queue = new Queue();
-  for (let n = 0; n < size; n++) {
-    const { done, value } = this.next();
-    if (done) return;
-    queue.push(value);
-  }
-  yield [...queue];
-  while (true) {
+  let isEmpty = true;
+  const next = (): IteratorResult<T[]> => {
+    if (isEmpty) {
+      for (let n = 0; n < size; n++) {
+        const { done, value } = this.next();
+        if (done) return { done: true, value: undefined };
+        queue.push(value);
+      }
+      isEmpty = false;
+      return { done: false, value: [...queue] };
+    }
     for (let n = 0; n < step; n++) {
       const { done, value } = this.next();
-      if (done) return;
+      if (done) return { done: true, value: undefined };
       queue.shift();
       queue.push(value);
     }
-    yield [...queue];
-  }
+    return { done: false, value: [...queue] };
+  };
+  return Iterator.from({ next });
 }

@@ -47,7 +47,9 @@ async function writeTypeMethodFiles() {
       let result = "";
       switch (typeName) {
         case "Iterator":
+        case "Generator":
         case "AsyncIterator":
+        case "AsyncGenerator":
           result += `import * as ${typeName} from "../${typeName}.ts";\n\n`;
       }
       result += `import key from "../symbols/${methodName}.ts";\n`;
