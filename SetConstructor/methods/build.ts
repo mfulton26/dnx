@@ -1,5 +1,5 @@
-export default function build<T>(builder: () => Iterable<T>): Set<T> {
+export default function build<T>(generate: () => Iterable<T>): Set<T> {
   const result = new Set<T>();
-  for (const value of builder()) result.add(value);
+  for (const value of generate()) result.add(value);
   return result;
 }

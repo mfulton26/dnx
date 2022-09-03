@@ -1,5 +1,5 @@
-export default function build<T>(builder: () => Iterable<T>): T[] {
+export default function build<T>(generate: () => Iterable<T>): T[] {
   const result = [];
-  for (const value of builder()) result.push(value);
+  for (const value of generate()) result.push(value);
   return result;
 }
