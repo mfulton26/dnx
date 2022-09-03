@@ -2,4 +2,10 @@
 
 export { default } from "./symbols/build.ts";
 
+import "./SetConstructor/build.ts";
+import "./StringConstructor/build.ts";
+import "./TypedArrayConstructor/build.ts";
+import "./MapConstructor/build.ts";
 import "./ArrayConstructor/build.ts";
+import "./WeakSetConstructor/build.ts";
+import "./WeakMapConstructor/build.ts";
