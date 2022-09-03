@@ -47,11 +47,18 @@ async function writeTypeMethodFiles() {
 
     function imports() {
       let result = "";
+      // todo: load supplement augmentations conditionally
       switch (typeName) {
         case "TypedArray":
         case "TypedArrayConstructor":
-          result += `import TypedArray from "../TypedArray.ts";\n\n`;
+        case "Queue":
+        case "QueueConstructor":
+        case "Deque":
+        case "DequeConstructor": {
+          const target = getTarget(typeName);
+          result += `import ${target} from "../${target}.ts";\n\n`;
           break;
+        }
         case "Iterator":
         case "Generator":
         case "AsyncIterator":
@@ -110,18 +117,18 @@ ${
     }
 
     function globalAugmentation() {
-      return `Object.defineProperty(${target(typeName)}, key, { value });\n`;
+      return `Object.defineProperty(${getTarget(typeName)}, key, { value });\n`;
+    }
 
-      function target(typeName: string) {
-        switch (typeName) {
-          case "Math":
-            return typeName;
-          default:
-            if (typeName.endsWith("Constructor")) {
-              return typeName.slice(0, -"Constructor".length);
-            }
-            return `${typeName}.prototype`;
-        }
+    function getTarget(typeName: string) {
+      switch (typeName) {
+        case "Math":
+          return typeName;
+        default:
+          if (typeName.endsWith("Constructor")) {
+            return typeName.slice(0, -"Constructor".length);
+          }
+          return `${typeName}.prototype`;
       }
     }
 

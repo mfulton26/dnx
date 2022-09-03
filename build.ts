@@ -7,5 +7,7 @@ import "./StringConstructor/build.ts";
 import "./TypedArrayConstructor/build.ts";
 import "./MapConstructor/build.ts";
 import "./ArrayConstructor/build.ts";
+import "./DequeConstructor/build.ts";
 import "./WeakSetConstructor/build.ts";
 import "./WeakMapConstructor/build.ts";
+import "./QueueConstructor/build.ts";
