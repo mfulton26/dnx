@@ -2,4 +2,5 @@
 
 export { default } from "./symbols/toArray.ts";
 
+import "./AsyncIterator/toArray.ts";
 import "./Iterator/toArray.ts";

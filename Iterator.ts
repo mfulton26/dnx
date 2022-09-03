@@ -7,3 +7,8 @@ export function from<T>(
 ): IterableIterator<T> {
   return Object.create(prototype, { next: { value: next } });
 }
+
+export function of<T>(...items: T[]) {
+  const iterator = items[Symbol.iterator]();
+  return from({ next: () => iterator.next() });
+}
