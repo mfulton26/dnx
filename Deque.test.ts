@@ -153,7 +153,7 @@ Deno.test("size", async (t) => {
     assertEquals(deque.size, 0);
   });
 
-  await t.step("after pushes", () => {
+  await t.step("after pushing", () => {
     deque.push();
     assertEquals(deque.size, 0);
     deque.push(1);
@@ -162,7 +162,7 @@ Deno.test("size", async (t) => {
     assertEquals(deque.size, 3);
   });
 
-  await t.step("after pops", () => {
+  await t.step("after popping", () => {
     deque.pop();
     assertEquals(deque.size, 2);
     deque.pop();
@@ -171,7 +171,7 @@ Deno.test("size", async (t) => {
     assertEquals(deque.size, 0);
   });
 
-  await t.step("after unshifts", () => {
+  await t.step("after unshifting", () => {
     deque.unshift();
     assertEquals(deque.size, 0);
     deque.unshift(1);
@@ -180,7 +180,7 @@ Deno.test("size", async (t) => {
     assertEquals(deque.size, 3);
   });
 
-  await t.step("after shifts", () => {
+  await t.step("after shifting", () => {
     deque.shift();
     assertEquals(deque.size, 2);
     deque.shift();
