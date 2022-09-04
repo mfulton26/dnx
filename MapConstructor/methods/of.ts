@@ -1,5 +1,7 @@
+import _of from "../../.CollectionConstructor/methods/of.ts";
+
+import "../../Map/add.ts";
+
 export default function of<K, V>(...items: (readonly [K, V])[]): Map<K, V> {
-  const result = new Map<K, V>();
-  for (const [key, value] of items) result.set(key, value);
-  return result;
+  return _of(new Map<K, V>(), ...items);
 }

@@ -1,7 +1,8 @@
+import _of from "../../.CollectionConstructor/methods/of.ts";
+
 import Deque from "../../Deque.ts";
+import "../../Deque/add.ts";
 
 export default function of<T>(...items: T[]): Deque<T> {
-  const result = new Deque<T>();
-  for (const value of items) result.push(value);
-  return result;
+  return _of(new Deque<T>(), ...items);
 }

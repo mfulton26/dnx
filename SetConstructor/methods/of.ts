@@ -1,5 +1,7 @@
+import _of from "../../.CollectionConstructor/methods/of.ts";
+
+import "../../Set/add.ts";
+
 export default function of<T>(...items: T[]): Set<T> {
-  const result = new Set<T>();
-  for (const value of items) result.add(value);
-  return result;
+  return _of(new Set<T>(), ...items);
 }

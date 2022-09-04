@@ -1,7 +1,8 @@
+import _build from "../../.CollectionConstructor/methods/build.ts";
+
 import Queue from "../../Queue.ts";
+import "../../Queue/add.ts";
 
 export default function build<T>(generate: () => Iterable<T>): Queue<T> {
-  const result = new Queue<T>();
-  for (const value of generate()) result.push(value);
-  return result;
+  return _build(new Queue<T>(), generate);
 }
