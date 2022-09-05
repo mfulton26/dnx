@@ -1,3 +1,6 @@
 {
-  "importMap": "importMap.json"
+  "importMap": "importMap.json",
+  "lint": { "files": { "exclude": ["node/"] } },
+  "fmt": { "files": { "exclude": ["node/"] } },
+  "test": { "files": { "exclude": ["node/"] } }
 }

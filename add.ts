@@ -7,7 +7,5 @@ import "./BigInt/add.ts";
 import "./Array/add.ts";
 import "./WeakSet/add.ts";
 import "./Number/add.ts";
-import "./Deque/add.ts";
 import "./Map/add.ts";
-import "./Queue/add.ts";
 import "./Set/add.ts";
