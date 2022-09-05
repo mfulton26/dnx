@@ -1,3 +1,3 @@
-export default function pipe<T, R>(this: T, fn: (value: T) => R): R {
-  return fn(this);
+export default function pipe<T, R>(this: T, transform: (value: T) => R): R {
+  return transform(this);
 }
