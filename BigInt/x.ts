@@ -2,8 +2,8 @@ import key from "../symbols/x.ts";
 import get from "./getters/x.ts";
 
 declare global {
-  interface Number {
-    [key]: typeof get;
+  interface BigInt {
+    [key]: ReturnType<typeof get>;
   }
 }
 

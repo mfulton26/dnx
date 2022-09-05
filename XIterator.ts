@@ -10,9 +10,7 @@ export interface Incrementable<T> {
   [add](addend: T): T;
   constructor: { [ZERO]: T; [ONE]: T };
 }
-
-export default class XIterator<T extends Incrementable<T>>
-  implements IterableIterator<T> {
+export default class XIterator<T extends Incrementable<T>> {
   readonly #limit: T;
   #n: T;
   readonly #one: T;
@@ -25,10 +23,6 @@ export default class XIterator<T extends Incrementable<T>>
     this.#one = one;
   }
 
-  [Symbol.iterator]() {
-    return this;
-  }
-
   next(): IteratorResult<T> {
     if (this.#n[compareTo](this.#limit) >= 0) {
       return { value: undefined, done: true };
@@ -38,5 +32,9 @@ export default class XIterator<T extends Incrementable<T>>
     return result;
   }
 }
+
+// deno-lint-ignore no-empty-interface
+export default interface XIterator<T extends Incrementable<T>>
+  extends IterableIterator<T> {}
 
 Object.setPrototypeOf(XIterator.prototype, Iterator.prototype);

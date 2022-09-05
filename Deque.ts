@@ -1,3 +1,7 @@
+import * as Iterator from "./Iterator.ts";
+
+import reverseIterator from "./symbols/reverseIterator.ts";
+
 interface Node<T> {
   value: T;
   next: Node<T>;
@@ -80,25 +84,27 @@ export default class Deque<T> {
     return node.value;
   }
 
-  *[Symbol.iterator]() {
+  [Symbol.iterator]() {
     const $ = this.#$;
-    for (
-      let current: Readonly<Node<T>> = $.next;
-      current !== $;
-      current = current.next
-    ) {
-      yield current.value;
-    }
+    let current: Readonly<Node<T>> = $.next;
+    const next = () => {
+      if (current === $) return { value: undefined, done: true };
+      const { value } = current;
+      current = current.next;
+      return { value, done: false };
+    };
+    return Iterator.from({ next });
   }
 
-  *reverseIterator() {
+  [reverseIterator]() {
     const $ = this.#$;
-    for (
-      let current: Readonly<Node<T>> = $.previous;
-      current !== $;
-      current = current.previous
-    ) {
-      yield current.value;
-    }
+    let current: Readonly<Node<T>> = $.previous;
+    const next = () => {
+      if (current === $) return { value: undefined, done: true };
+      const { value } = current;
+      current = current.previous;
+      return { value, done: false };
+    };
+    return Iterator.from({ next });
   }
 }

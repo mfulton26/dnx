@@ -3,7 +3,7 @@ import get from "./getters/x.ts";
 
 declare global {
   interface Number {
-    [key]: typeof get;
+    [key]: ReturnType<typeof get>;
   }
 }
 
