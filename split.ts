@@ -3,3 +3,4 @@
 export { default } from "./symbols/split.ts";
 
 import "./Array/split.ts";
+import "./String/split.ts";
