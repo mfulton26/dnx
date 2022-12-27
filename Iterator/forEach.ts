@@ -2,7 +2,7 @@
 
 import * as Iterator from "../Iterator.ts";
 
-import key from "../symbols/forEach.ts";
+import key from "../forEach.ts";
 import value from "./methods/forEach.ts";
 
 declare global {
@@ -13,4 +13,3 @@ declare global {
 
 Object.defineProperty(Iterator.prototype, key, { value });
 
-export default key;

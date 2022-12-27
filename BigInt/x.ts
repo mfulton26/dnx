@@ -1,4 +1,4 @@
-import key from "../symbols/x.ts";
+import key from "../x.ts";
 import get from "./getters/x.ts";
 
 declare global {

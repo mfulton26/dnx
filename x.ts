@@ -1,4 +1,6 @@
-export { default } from "./symbols/x.ts";
+/**
+ * [foo](./XIterator.ts)
+ */
+const x = Symbol();
 
-import "./BigInt/x.ts";
-import "./Number/x.ts";
+export default x;

@@ -3,6 +3,9 @@ import Collator from "./Collator.ts";
 import compareBy from "./comparisons/compareBy.ts";
 import naturalOrder from "./comparisons/naturalOrder.ts";
 
+import "./String/compareTo.ts";
+import "./Number/compareTo.ts";
+
 import {
   assertEquals,
   assertInstanceOf,

@@ -1,4 +1,3 @@
-export { default } from "./symbols/ONE.ts";
+const ONE = Symbol();
 
-import "./BigIntConstructor/ONE.ts";
-import "./NumberConstructor/ONE.ts";
+export default ONE;

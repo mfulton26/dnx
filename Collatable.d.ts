@@ -1,4 +1,4 @@
-import type compareTo from "./symbols/compareTo.ts";
+import type compareTo from "./compareTo.ts";
 
 export default interface Collatable {
   /**

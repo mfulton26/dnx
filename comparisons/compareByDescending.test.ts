@@ -1,5 +1,9 @@
 import compareByDescending from "./compareByDescending.ts";
 
+import "../String/compareTo.ts";
+import "../Number/compareTo.ts";
+import "../BigInt/compareTo.ts";
+
 import Collator from "../Collator.ts";
 
 import { assertInstanceOf } from "std/testing/asserts.ts";

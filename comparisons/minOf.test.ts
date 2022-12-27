@@ -1,5 +1,11 @@
 import minOf from "./minOf.ts";
 
+import "../String/compareTo.ts";
+import "../Boolean/compareTo.ts";
+import "../Number/compareTo.ts";
+import "../BigInt/compareTo.ts";
+import "../Date/compareTo.ts";
+
 import { assertEquals } from "std/testing/asserts.ts";
 
 Deno.test("returns undefined for no values", () => {

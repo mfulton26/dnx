@@ -2,6 +2,12 @@ import type Collatable from "../Collatable.d.ts";
 
 import compareValuesBy from "./compareValuesBy.ts";
 
+import "../Boolean/compareTo.ts";
+import "../Number/compareTo.ts";
+import "../BigInt/compareTo.ts";
+import "../String/compareTo.ts";
+import "../Date/compareTo.ts";
+
 import assertSign from "../testing/assertSign.ts";
 
 Deno.test("compares-by booleans", () => {

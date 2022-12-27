@@ -2,7 +2,7 @@
 
 import * as AsyncIterator from "../AsyncIterator.ts";
 
-import key from "../symbols/slices.ts";
+import key from "../slices.ts";
 import value from "./methods/slices.ts";
 
 declare global {
@@ -13,4 +13,3 @@ declare global {
 
 Object.defineProperty(AsyncIterator.prototype, key, { value });
 
-export default key;

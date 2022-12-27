@@ -1,4 +1,4 @@
-import add from "../../symbols/add.ts";
+import add from "../../add.ts";
 
 export type Args<T> = [...items: T[]];
 

@@ -1,5 +1,10 @@
 import reverseOrder from "./reverseOrder.ts";
 
+import "../Boolean/compareTo.ts";
+import "../Number/compareTo.ts";
+import "../BigInt/compareTo.ts";
+import "../Date/compareTo.ts";
+
 import Collator from "../Collator.ts";
 
 import { assertEquals, assertInstanceOf } from "std/testing/asserts.ts";

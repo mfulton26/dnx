@@ -1,4 +1,4 @@
-import key from "../symbols/ZERO.ts";
+import key from "../ZERO.ts";
 
 declare global {
   interface Number {

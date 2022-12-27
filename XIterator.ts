@@ -1,9 +1,9 @@
 import * as Iterator from "./Iterator.ts";
 
-import compareTo from "./symbols/compareTo.ts";
-import add from "./symbols/add.ts";
-import ZERO from "./symbols/ZERO.ts";
-import ONE from "./symbols/ONE.ts";
+import compareTo from "./compareTo.ts";
+import add from "./add.ts";
+import ZERO from "./ZERO.ts";
+import ONE from "./ONE.ts";
 
 export interface Incrementable<T> {
   [compareTo](other: T): number;

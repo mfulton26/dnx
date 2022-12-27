@@ -2,7 +2,7 @@
 
 import * as AsyncIterator from "../AsyncIterator.ts";
 
-import key from "../symbols/toIterable.ts";
+import key from "../toIterable.ts";
 import value from "./methods/toIterable.ts";
 
 declare global {

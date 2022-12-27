@@ -1,4 +1,3 @@
-export { default } from "./symbols/ZERO.ts";
+const ZERO = Symbol();
 
-import "./BigIntConstructor/ZERO.ts";
-import "./NumberConstructor/ZERO.ts";
+export default ZERO;

@@ -1,4 +1,4 @@
-import add from "../../symbols/add.ts";
+import add from "../../add.ts";
 
 export default function from<T, C extends { [add](item: T): void }>(
   destination: C,

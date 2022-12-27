@@ -1,4 +1,4 @@
-import key from "../symbols/ONE.ts";
+import key from "../ONE.ts";
 
 declare global {
   interface Number {

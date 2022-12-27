@@ -1,6 +1,6 @@
 import * as Iterator from "./Iterator.ts";
 
-import reverseIterator from "./symbols/reverseIterator.ts";
+import reverseIterator from "./reverseIterator.ts";
 
 interface Node<T> {
   value: T;
