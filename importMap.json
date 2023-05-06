@@ -1,5 +1,6 @@
 {
   "imports": {
+    "dnx/": "./",
     "std/": "https://deno.land/std@0.168.0/"
   }
 }

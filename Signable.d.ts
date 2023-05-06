@@ -1,5 +1,6 @@
-import type sign from "./sign.ts";
+import $ from "dnx/$.ts";
+import "dnx/$/sign.ts";
 
 export default interface Signable<ReturnType> {
-  [sign](): ReturnType;
+  [$.sign](): ReturnType;
 }
